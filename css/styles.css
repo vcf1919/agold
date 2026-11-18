@@ -133,7 +133,6 @@ address { font-style: normal; }
   font-family: var(--f-display); font-size: .95rem; color: var(--gold-text); letter-spacing: .04em;
   display: inline-flex; align-items: center; gap: 1rem;
 }
-.sec-num::after { content: ''; width: clamp(2.5rem, 6vw, 5rem); height: 1px; background: var(--gold); }
 
 .display {
   font-family: var(--f-display); font-weight: 400;
@@ -145,7 +144,8 @@ address { font-style: normal; }
   font-family: var(--f-italic); font-style: italic; font-weight: 400; font-size: .8em; letter-spacing: -.01em;
   color: var(--gold-text); padding-right: .04em;
 }
-.line { display: block; overflow: hidden; padding: .04em 0 .14em; margin-bottom: -.12em; }
+/* Máscara de línea con holgura para las colas de la cursiva (j, y, q) a ambos lados */
+.line { display: block; overflow: hidden; padding: .06em .16em .34em; margin: 0 -.16em -.3em; }
 .line > span { display: inline-block; will-change: transform; }
 .lead { font-size: clamp(1.15rem, 1.6vw, 1.4rem); line-height: 1.45; color: var(--ink); max-width: 34ch; }
 
@@ -314,17 +314,17 @@ address { font-style: normal; }
   display: flex; flex-wrap: wrap; justify-content: center; column-gap: .24em;
   font-family: var(--f-display); font-weight: 400; font-size: clamp(3.6rem, 17.5vw, 11rem); line-height: .88; letter-spacing: -.04em;
 }
-.hero__title .line { flex-basis: 100%; padding-inline: .06em; }
+.hero__title .line { flex-basis: 100%; }
 .hero__title .br { display: none; }
 @media (min-width: 700px) {
   .hero__title { font-size: clamp(3.6rem, 12.2vw, 11rem); }
-  .hero__title .line { flex-basis: auto; padding-inline: 0; }
+  .hero__title .line { flex-basis: auto; }
   .hero__title .br { display: block; flex-basis: 100%; height: 0; }
 }
 .hero__sub { margin-top: clamp(1.4rem, 3vh, 2.2rem); font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); max-width: 62ch; }
 .hero__ctas { margin-top: 1.6rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 2rem; }
 /* Estados iniciales de la secuencia de scroll (solo con movimiento y JS) */
-.motion .hero__title .line > span { transform: translateY(140%); }
+.motion .hero__title .line > span { transform: translateY(170%); }
 .motion [data-hero-fade] { opacity: 0; }
 .no-gsap .hero__title .line > span, .no-gsap [data-hero-fade] { transform: none !important; opacity: 1 !important; }
 

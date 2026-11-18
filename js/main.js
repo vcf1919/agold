@@ -295,7 +295,7 @@
         .to('[data-hero-fade]', { opacity: 1, duration: 0.14, stagger: 0.05 }, 0.44)
         .to({}, { duration: 0.35 });
       if (html.classList.contains('hero-svg')) heroTl.to(svgWrap, { scale: 0.72, opacity: 0.12, duration: 0.35 }, 0.02);
-      gsap.set('.hero__title .line > span', { yPercent: 140, y: 0 });
+      gsap.set('.hero__title .line > span', { yPercent: 170, y: 0 });
       html.classList.add('gsap-ready');
 
       // Caída de las láminas sobre las primeras fotos
@@ -326,7 +326,7 @@
     if (motion) {
       $$('[data-lines]').forEach(function (el) {
         var spans = $$('.line > span', el);
-        gsap.set(spans, { yPercent: 140 });
+        gsap.set(spans, { yPercent: 170 });
         ScrollTrigger.create({
           trigger: el, start: 'top 88%', once: true,
           onEnter: function () { gsap.to(spans, { yPercent: 0, duration: 1.3, ease: 'expo.out', stagger: 0.09 }); },
