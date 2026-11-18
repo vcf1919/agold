@@ -17,6 +17,8 @@ Proyecto estático: HTML, CSS y JS sin framework y **sin paso de build**.
 
 `_headers` define la caché de los assets y las cabeceras de seguridad (CSP incluida). Si añades una librería o un servicio externo nuevo, añade su dominio a la `Content-Security-Policy`.
 
+Al cambiar CSS o JS, sube el número de versión (`?v=4`) en las etiquetas de `index.html` para que nadie vea la versión anterior.
+
 Para probar en local: `python3 -m http.server` desde la raíz y abre `http://localhost:8000`.
 Parámetros útiles: `?hero=svg` o `?hero=3d` fuerzan la versión de la mariposa.
 

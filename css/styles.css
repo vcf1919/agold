@@ -144,9 +144,10 @@ address { font-style: normal; }
   font-family: var(--f-italic); font-style: italic; font-weight: 400; font-size: .8em; letter-spacing: -.01em;
   color: var(--gold-text); padding-right: .04em;
 }
-/* Máscara de línea con holgura para las colas de la cursiva (j, y, q) a ambos lados */
-.line { display: block; overflow: hidden; padding: .06em .16em .34em; margin: 0 -.16em -.3em; }
-.line > span { display: inline-block; will-change: transform; }
+/* Líneas de titular: se revelan con un barrido (clip-path) que al final se abre
+   más allá de la letra, para que las colas de la cursiva (j, y, q) nunca se corten */
+.line { display: block; }
+.line > span { display: inline-block; will-change: transform, clip-path; }
 .lead { font-size: clamp(1.15rem, 1.6vw, 1.4rem); line-height: 1.45; color: var(--ink); max-width: 34ch; }
 
 /* ─────────── Botones ─────────── */
@@ -324,9 +325,9 @@ address { font-style: normal; }
 .hero__sub { margin-top: clamp(1.4rem, 3vh, 2.2rem); font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); max-width: 62ch; }
 .hero__ctas { margin-top: 1.6rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 2rem; }
 /* Estados iniciales de la secuencia de scroll (solo con movimiento y JS) */
-.motion .hero__title .line > span { transform: translateY(170%); }
+.motion .hero__title .line > span { transform: translateY(45%); clip-path: inset(0% -40% 100% -40%); }
 .motion [data-hero-fade] { opacity: 0; }
-.no-gsap .hero__title .line > span, .no-gsap [data-hero-fade] { transform: none !important; opacity: 1 !important; }
+.no-gsap .hero__title .line > span, .no-gsap [data-hero-fade] { transform: none !important; clip-path: none !important; opacity: 1 !important; }
 
 /* Movimiento reducido: hero estático, sin pin */
 .reduced .hero__stage { height: auto; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: calc(var(--nav-h) + 1rem) 0 6.5rem; }

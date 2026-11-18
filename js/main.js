@@ -291,11 +291,11 @@
       heroTl
         .to('[data-hero-kicker], [data-hero-cue]', { opacity: 0, y: -12, duration: 0.12 }, 0)
         .to('.hero__shadow', { opacity: 0, duration: 0.2 }, 0)
-        .to('.hero__title .line > span', { y: 0, yPercent: 0, duration: 0.22, ease: 'power3.out', stagger: 0.045 }, 0.16)
+        .to('.hero__title .line > span', { y: 0, yPercent: 0, clipPath: 'inset(-40% -40% -80% -40%)', duration: 0.22, ease: 'power3.out', stagger: 0.045 }, 0.16)
         .to('[data-hero-fade]', { opacity: 1, duration: 0.14, stagger: 0.05 }, 0.44)
         .to({}, { duration: 0.35 });
       if (html.classList.contains('hero-svg')) heroTl.to(svgWrap, { scale: 0.72, opacity: 0.12, duration: 0.35 }, 0.02);
-      gsap.set('.hero__title .line > span', { yPercent: 170, y: 0 });
+      gsap.set('.hero__title .line > span', { yPercent: 45, clipPath: 'inset(0% -40% 100% -40%)', y: 0 });
       html.classList.add('gsap-ready');
 
       // Caída de las láminas sobre las primeras fotos
@@ -326,10 +326,10 @@
     if (motion) {
       $$('[data-lines]').forEach(function (el) {
         var spans = $$('.line > span', el);
-        gsap.set(spans, { yPercent: 170 });
+        gsap.set(spans, { yPercent: 45, clipPath: 'inset(0% -40% 100% -40%)' });
         ScrollTrigger.create({
           trigger: el, start: 'top 88%', once: true,
-          onEnter: function () { gsap.to(spans, { yPercent: 0, duration: 1.3, ease: 'expo.out', stagger: 0.09 }); },
+          onEnter: function () { gsap.to(spans, { yPercent: 0, clipPath: 'inset(-40% -40% -80% -40%)', duration: 1.3, ease: 'expo.out', stagger: 0.09 }); },
         });
       });
       // Parallax suave
