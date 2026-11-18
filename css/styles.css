@@ -661,8 +661,9 @@ address { font-style: normal; }
 .footer__legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem 2rem; margin-top: clamp(3rem, 6vw, 5rem); padding-top: 1.4rem; padding-bottom: 1.4rem; border-top: 1px solid rgba(201, 168, 106, .2); font-size: .78rem; letter-spacing: .06em; }
 .footer__credit a { color: var(--gold-on-dark); border-bottom: 1px solid rgba(201, 168, 106, .4); }
 .footer__giant {
-  font-family: var(--f-display); font-size: 33vw; line-height: .74; letter-spacing: -.05em; text-align: center;
-  color: #6F5A35; margin-bottom: -.13em; margin-top: 1rem; user-select: none; white-space: nowrap;
+  /* Sedan: «AGOLD» mide ~3,36 em → a 27vw ocupa ~92vw y cabe entero a lo ancho */
+  font-family: var(--f-display); font-size: 27vw; line-height: .78; letter-spacing: -.05em; text-align: center; padding-left: .05em;
+  color: #6F5A35; margin-bottom: -.1em; margin-top: 1.5rem; user-select: none; white-space: nowrap;
   background: linear-gradient(180deg, #8C7246 0%, #5E4A2B 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 
