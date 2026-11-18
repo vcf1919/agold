@@ -295,7 +295,7 @@
         .to('[data-hero-fade]', { opacity: 1, duration: 0.14, stagger: 0.05 }, 0.44)
         .to({}, { duration: 0.35 });
       if (html.classList.contains('hero-svg')) heroTl.to(svgWrap, { scale: 0.72, opacity: 0.12, duration: 0.35 }, 0.02);
-      gsap.set('.hero__title .line > span', { yPercent: 110, y: 0 });
+      gsap.set('.hero__title .line > span', { yPercent: 140, y: 0 });
       html.classList.add('gsap-ready');
 
       // Caída de las láminas sobre las primeras fotos
@@ -326,7 +326,7 @@
     if (motion) {
       $$('[data-lines]').forEach(function (el) {
         var spans = $$('.line > span', el);
-        gsap.set(spans, { yPercent: 110 });
+        gsap.set(spans, { yPercent: 140 });
         ScrollTrigger.create({
           trigger: el, start: 'top 88%', once: true,
           onEnter: function () { gsap.to(spans, { yPercent: 0, duration: 1.3, ease: 'expo.out', stagger: 0.09 }); },
@@ -498,7 +498,7 @@
         '<div class="card__media"' + (i < 3 ? ' data-brush' : '') + '>' +
         picture(d.src, d.w, '(min-width: 900px) 34vw, 74vw', d.alt, { pos: d.pos }) +
         '</div></button>' +
-        '<p class="card__cap"><b>Nº ' + it.n + '</b><span>— ' + d.title + ' · ' + d.shape + '</span></p></li>';
+        '<p class="card__cap"><b>Nº ' + it.n + '</b><span>' + d.title + ' · ' + d.shape + '</span></p></li>';
     }).join('');
     items.forEach(function (it, i) { it.el = track.children[i]; });
     var countEl = $('[data-works-count]');
@@ -587,7 +587,7 @@
       var it = vList[vIndex];
       var d = it.data;
       vStage.innerHTML = picture(d.src, d.w, '92vw', d.alt, { eager: true });
-      vCap.textContent = 'Nº ' + it.n + ' — ' + d.title + ' · ' + d.shape;
+      vCap.innerHTML = '<b>Nº ' + it.n + '</b><span>' + d.title + ' · ' + d.shape + '</span>';
       vCount.textContent = ('0' + (vIndex + 1)).slice(-2) + ' / ' + ('0' + vList.length).slice(-2);
       if (motion) gsap.fromTo($('img', vStage), { opacity: 0, scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'expo.out' });
     }

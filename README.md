@@ -59,7 +59,7 @@ scripts/              utilidades (no se usan en el despliegue)
 
 ## Tipografía
 
-Titulares en **Imbue** (didona condensada, variable), acentos en cursiva con **Redaction Italic**, etiquetas en **Syne** y texto en **Ysabeau**. Todas tienen licencia SIL Open Font License y están autoalojadas en `assets/fonts/`.
+Titulares en **Sedan** (romana renacentista, con su cursiva para las palabras de acento) y texto, interfaz y etiquetas en **Instrument Sans**. Ambas tienen licencia SIL Open Font License y están autoalojadas en `assets/fonts/`.
 
 ## Pendiente de Alba (placeholders visibles en la web)
 

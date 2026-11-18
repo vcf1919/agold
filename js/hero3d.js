@@ -181,7 +181,7 @@ export function createHero({ container, mobile = false, lowPower = false, onSlow
     const bw = 3.2, bh = 3.05;
     const portrait = w / h < 0.85;
     const heightFit = bh / (portrait ? 0.5 : 0.54);
-    const widthFit = bw / (portrait ? 0.92 : 0.8) / camera.aspect;
+    const widthFit = bw / (portrait ? 0.8 : 0.8) / camera.aspect;
     state.H = Math.max(heightFit, widthFit);
     state.W = state.H * camera.aspect;
     const d = state.H / 2 / Math.tan((FOV * Math.PI) / 360);

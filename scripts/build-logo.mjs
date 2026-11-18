@@ -89,7 +89,7 @@ function seal() {
     <path d="${arc(R, 180 + botGap, 360 - topGap)}"/>
     <circle cx="${c}" cy="${c}" r="${Ri}"/>
   </g>
-  <g fill="${GOLD}" font-family="Syne, Futura, 'Century Gothic', 'Helvetica Neue', Arial, sans-serif" font-weight="400">
+  <g fill="${GOLD}" font-family="'Instrument Sans', Futura, 'Century Gothic', 'Helvetica Neue', Arial, sans-serif" font-weight="400">
     <text font-size="33" letter-spacing="5"><textPath href="#arc-top" startOffset="50%" text-anchor="middle">AGOLD</textPath></text>
     <text font-size="23" letter-spacing="4"><textPath href="#arc-bot" startOffset="50%" text-anchor="middle">NAILS &amp; BEAUTY</textPath></text>
   </g>

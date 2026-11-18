@@ -9,7 +9,7 @@
     <path d="M59.05 318.27A184 184 0 0 1 110.8 39.07"/>
     <circle cx="200" cy="200" r="160"/>
   </g>
-  <g fill="#B8975A" font-family="Syne, Futura, 'Century Gothic', 'Helvetica Neue', Arial, sans-serif" font-weight="400">
+  <g fill="#B8975A" font-family="'Instrument Sans', Futura, 'Century Gothic', 'Helvetica Neue', Arial, sans-serif" font-weight="400">
     <text font-size="33" letter-spacing="5"><textPath href="#arc-top" startOffset="50%" text-anchor="middle">AGOLD</textPath></text>
     <text font-size="23" letter-spacing="4"><textPath href="#arc-bot" startOffset="50%" text-anchor="middle">NAILS &amp; BEAUTY</textPath></text>
   </g>
